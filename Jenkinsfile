@@ -11,7 +11,7 @@ agent any
                                }
                                post {
                         success {
-                        bat "echo 'Projet lors de la compilation du projet'"
+                        bat "echo 'Projet compilé avec succès'"
                         
                         }
                                        failure {
