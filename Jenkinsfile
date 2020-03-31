@@ -23,9 +23,10 @@ agent any
                               bat 'mvn test' 
                               }
                               post {
+                                      always{
                                     
                                     junit '**/target/surefile-reports/*.xml'                                             
-                              
+                                      }
                               }
                               
                 }
