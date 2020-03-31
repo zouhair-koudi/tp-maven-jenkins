@@ -18,15 +18,13 @@ agent any
                                }
                 
                 }
-                stage('Test'){
+                stage('test'){
                               steps{
                               bat 'mvn test' 
                               }
                               post {
                               always {
-                                      junit (allowEmptyResults: false,
-                                            keepLongStdio: true,
-                                          testResults: '**/target/surefile-reports/TEST-com.mycompany.app.AppTest.xml')
+                                      junit  'target/surefile-reports/TEST-com.mycompany.app.AppTest.xml'
                                               
                               }
                               }
