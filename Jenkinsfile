@@ -28,7 +28,7 @@ agent any
                               post {
                                       always {
                                     
-                                    junit 'target/surefile-reports/*.xml'                                             
+                                    junit (allowEmptyResults: true, testResults: 'target/surefile-reports/*.xml')                                             
                                       }
                               }
                               
