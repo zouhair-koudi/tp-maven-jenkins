@@ -33,13 +33,13 @@ agent any
                               }
                               
                 }
-                stage('couverture'){
+                stage('couverture') {
                                     steps{
                                     bat 'mvn cobertura:cobertura -Dcobertura.report.format=xml'
                                     
                                     }
-                                    post {
-                                    always{
+                                       post {
+                                             always {
                                     cobertura coberturaReportFile: '**/target/site/cobertura/coverage.xml'
                                     }
                                     }
