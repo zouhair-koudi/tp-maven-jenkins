@@ -18,15 +18,14 @@ agent any
                                }
                 
                 }
-                stage('test'){
+                stage('Test'){
                               steps{
                               bat 'mvn test' 
                               }
                               post {
-                              always {
-                                      junit 'target/surefile-reports/*.xml'
-                                              
-                              }
+                                    
+                                    junit '**/target/surefile-reports/*.xml'                                             
+                              
                               }
                               
                 }
