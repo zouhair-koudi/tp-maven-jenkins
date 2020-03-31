@@ -26,7 +26,7 @@ agent any
                               always {
                                       junit (allowEmptyResults: false,
                                             keepLongStdio: true,
-                                          testResults: 'target/surefile-reports/*.xml')
+                                          testResults: '**/target/surefile-reports/TEST-com.mycompany.app.AppTest.xml')
                                               
                               }
                               }
