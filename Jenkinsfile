@@ -24,7 +24,7 @@ agent any
                               }
                               post {
                               always {
-                                      junit 'target/surefile-reports/TEST-com.mycompany.app.AppTest.xml'
+                                      junit 'target/surefile-reports/*.xml'
                               }
                               }
                               
