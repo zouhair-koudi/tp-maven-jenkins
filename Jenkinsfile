@@ -14,18 +14,21 @@ agent any
                         bat "echo 'Projet lors de la compilation du projet'"
                         
                         }
+                                       failure {
+                                       bat 'echo "Erreur lors de la compilation de projet"'
+                                       }
                                
                                }
                 
                 }
-                stage('Test'){
-                              steps{
+                stage('Test') {
+                              steps {
                               bat 'mvn test' 
                               }
                               post {
-                                      always{
+                                      always {
                                     
-                                    junit '**/target/surefile-reports/*.xml'                                             
+                                    junit 'target/surefile-reports/*.xml'                                             
                                       }
                               }
                               
